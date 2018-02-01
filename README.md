@@ -62,11 +62,17 @@ Does a one time download of Request Control Cloudlet policyIds and groupIds and 
 ```
 
 ### list
-List current Request Control Cloudlet policy names  
+List all current Request Control Cloudlet policy names for all groups for the specific account
 
 ```bash
 %  akamai-request-control list
 ```
+The flags of interest for show are:
+
+```
+--groupid <groupid>        Lists policy name for a specific groupid
+```
+
 
 ### show
 Get specific details for a policy name. Available information include configurations that reference that policy, current version numbers on Akamai staging and production, version history, and current rule settings.
