@@ -23,7 +23,6 @@ Commands:
   list                			List current Request Control Cloudlet policy names
   show       					Get specific details for a policy name
   activate     					Activate a specified version for a policy
-  deactivate   					Deactivate a specified version for a policy
   download 						Download the raw policy rules for a specified policy version
   create-version 				Activate a specified version for a policy
   addRule 						Adds a new rule to a specified version for a policy
@@ -47,7 +46,6 @@ Main program that wraps this functionality in a command line utility:
 * [list](#list)
 * [show](#show)
 * [activate](#activate)
-* [deactivate](#deactivate)
 * [download](#download)
 * [create-version](#create-version)
 * [addRule](#addRule)
@@ -99,23 +97,6 @@ Activate a specified version for a policy to the appropriate network (staging or
 ```
 
 The flags of interest for activate are:
-
-```
---policy <policyName>   Specified Request Control Cloudlet policy name
---version <version>     Specific version number for that policy name
---network <network>     Either staging or production
-
-```
-
-### deactivate
-Activate a specified version for a policy to the appropriate network (staging or production)
-
-```bash
-%  akamai-request-control activate --policy samplePolicyName --version 87 --network staging
-%  akamai-request-control activate --policy samplePolicyName --version 71 --network production
-```
-
-The flags of interest for deactivate are:
 
 ```
 --policy <policyName>   Specified Request Control Cloudlet policy name
